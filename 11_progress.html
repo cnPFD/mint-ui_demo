@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <mt-progress :value="60" :bar-height="5">
+      <div slot="start">0%</div>
+      <div slot="end">100%</div>
+    </mt-progress>
+  </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+
+    })
+  </script>
+</html>

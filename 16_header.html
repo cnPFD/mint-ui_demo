@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app1">
+    <mt-header title="多个按钮">
+      <router-link to="/" slot="left">
+        <mt-button icon="back">返回</mt-button>
+        <mt-button @click="handleClose">关闭</mt-button>
+      </router-link>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+  </div>
+</body>
+
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app1',
+  })
+</script>
+
+</html>

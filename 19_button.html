@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <mt-button type="default" size="large" disabled >default</mt-button>
+    <mt-button type="primary" size="large" plain>primary</mt-button>
+    <mt-button type="danger" size="large"> <img src="assets/100x100.png" height="20" width="20" slot="icon">
+  带自定义图标</mt-button>
+  <!-- 绑定 click 事件 -->
+  <mt-button @click.native="handleClick">点击触发 handleClick</mt-button>
+  </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+            handleClick: function() {
+              this.$toast('Hello world!')
+            }
+          }
+  })
+</script>
+
+</html>

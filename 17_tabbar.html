@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <mt-tab-container v-model="active">
+      <mt-tab-container-item id="外卖">
+        <mt-cell v-for="n in 10" :key="n" title="tab-container 1"></mt-cell>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="订单">
+        <mt-cell v-for="n in 5" :key="n" title="tab-container 2"></mt-cell>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="发现">
+        <mt-cell v-for="n in 7" :key="n" title="tab-container 3"></mt-cell>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="我的">
+        <mt-cell v-for="n in 2" :key="n" title="tab-container 4"></mt-cell>
+      </mt-tab-container-item>
+    </mt-tab-container>
+
+    <mt-tabbar v-model="active">
+      <mt-tab-item id="外卖">
+        <img slot="icon" src="assets/100x100.png"> 外卖
+      </mt-tab-item>
+      <mt-tab-item id="订单">
+        <img slot="icon" src="assets/100x100.png"> 订单
+      </mt-tab-item>
+      <mt-tab-item id="发现">
+        <img slot="icon" src="assets/100x100.png"> 发现
+      </mt-tab-item>
+      <mt-tab-item id="我的">
+        <img slot="icon" src="assets/100x100.png"> 我的
+      </mt-tab-item>
+    </mt-tabbar>
+  </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      active: '外卖',
+    }
+  })
+</script>
+
+</html>
