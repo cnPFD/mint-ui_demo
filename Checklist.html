@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="app">
+    <mt-cell title="复选框列表"
+    v-model="value">
+     <mt-checklist
+        title="复选框列表"
+        v-model="value"
+        :options="['选项A', '选项B', '选项C']">
+      </mt-checklist>
+    </mt-cell>
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="JS/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="JS/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+    })
+  </script>
+</html>

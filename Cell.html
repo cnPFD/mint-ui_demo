@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="c1">
+    <mt-cell title="标题文字"  to="http://www.baidu.com" is-link value="带链接">
+      <!-- <span>icon 是图片</span> -->
+      <img slot="icon" src="img/100x100.png" width="24" height="24">
+    </mt-cell>
+    <mt-cell title="标题" label="描述信息" is-link>
+       <mt-button icon="back" type="primary" size="small">按钮</mt-button>
+    </mt-cell>
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="JS/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="JS/index.js"></script>
+  <script>
+    new Vue({
+      el: '#c1',
+})
+  </script>
+</html>

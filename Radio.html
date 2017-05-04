@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>开关</title>
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+  <div id="app">
+    <!-- <h3>Switch-开关</h3>
+    <mt-switch v-model="value">开关</mt-switch>
+
+    <h3>checklist-复选框列表</h3>
+<mt-cell>
+    <mt-checklist
+      title="复选框列表"
+      v-model="value"
+      :options="['选项A', '选项B', '选项C']">
+    </mt-checklist>
+  </mt-cell> -->
+
+    <h3>radio-单选框列表</h3>
+    <mt-radio
+      title="单选框列表"
+      v-model="value"
+      :options="['选项A', '选项B', '选项C']">
+
+    </mt-radio>
+
+    <mt-radio
+      align="right"
+      title="右对齐"
+      v-model="value"
+      :options="['选项A', '选项B', '选项C']">
+    </mt-radio>
+  </div>
+  </body>
+
+  <!-- 先引入 Vue -->
+  <script src="JS/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="JS/index.js"></script>
+  <script>
+    new Vue({
+      el:'#app',
+
+})
+  </script>
+
+</html>

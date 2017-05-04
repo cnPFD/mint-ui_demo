@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="app">
+    <mt-button @click.native="handleClick">按钮</mt-button>
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="JS/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="JS/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        handleClick: function() {
+            this.$toast({
+            message: '操作成功',
+            iconClass: 'icon icon-success'
+          })
+        }
+      }
+    })
+  </script>
+</html>

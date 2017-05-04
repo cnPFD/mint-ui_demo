@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div id="app">
+    <mt-cell-swipe
+      title="triple-bounce"
+      :right="[
+        {
+          content: 'Delete',
+          style: { background: 'red', color: '#fff' },
+          handler: () => this.$messagebox('delete')
+        }
+      ]">
+      <mt-spinner  color="#26a2ff" type="triple-bounce">
+      </mt-spinner>
+    </mt-cell-swipe>
+  </div>
+</body>
+  <!-- 1.先引入 Vue -->
+  <script src="JS/vue.js"></script>
+  <!-- 2.引入组件库 -->
+  <script src="JS/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+
+    })
+  </script>
+</html>

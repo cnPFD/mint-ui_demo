@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>搜索</title>
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+    <div id="Search">
+      <mt-search
+        v-model="value"
+        cancel-text="取消"
+        placeholder="搜索...">
+      </mt-search>
+    </div>
+
+    <!-- 1.先引入 Vue -->
+    <script src="JS/vue.js"></script>
+    <!-- 2.引入组件库 -->
+    <script src="JS/index.js"></script>
+    <script>
+      new Vue({
+        el:"#Search",
+      })
+    </script>
+  </body>
+</html>
