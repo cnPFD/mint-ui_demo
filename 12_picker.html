@@ -15,7 +15,9 @@
 <!-- 引入组件库 -->
 <script src="mint-ui/lib/index.js"></script>
   <script>
-  export default {
+
+  new Vue({
+    el: '#app',
     methods: {
       onValuesChange(picker, values) {
         if (values[0] > values[1]) {
@@ -44,6 +46,6 @@
         ]
       };
     }
-};
+  })
   </script>
 </html>

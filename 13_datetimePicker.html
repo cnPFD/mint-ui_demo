@@ -7,10 +7,11 @@
 </head>
 <body>
   <div id="app">
+    <input type="button" @click="openPicker">
     <mt-datetime-picker
-    ref="picker"
-    type="time"
-    v-model="pickerValue">
+      ref="picker"
+      type="time"
+      v-model="pickerValue">
   </mt-datetime-picker>
   </div>
 </body>
@@ -19,12 +20,19 @@
 <!-- 引入组件库 -->
 <script src="mint-ui/lib/index.js"></script>
   <script>
-  export default {
- methods: {
-   openPicker() {
-     this.$refs.picker.open();
-   }
- }
-};
+  new Vue({
+    el: '#app',
+    data: {
+      pickerValue: ''
+    },
+    methods: {
+      openPicker() {
+        console.log(this.$refs.picker.$el);
+        this.$refs.picker.open();
+        this.$refs.picker.$el.style.display="block";
+      }
+    }
+  })
+
   </script>
 </html>
