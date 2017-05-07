@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>loadmore</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <template>
+    <mt-loadmore :top-method="loadTop" @top-status-change="handleTopChange">
+    <ul>
+      <li v-for="item in list">{{ item }}</li>
+    </ul>
+    <div slot="top" class="mint-loadmore-top">
+      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
+      <span v-show="topStatus === 'loading'">Loading...</span>
+    </div>
+  </mt-loadmore>
+</template>
+  </body>
+  <script src="vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="mint-ui/lib/index.js"></script>
+  <script type="text/javascript">
+  export default ({
+  data() {
+    return {
+      topStatus: '',
+      // ...
+    };
+  },
+  methods: {
+    handleTopChange(status) {
+      this.topStatus = status;
+    },
+    // ...
+  },
+  // ...
+});
+  </script>
+</html>

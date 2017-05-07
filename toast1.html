@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+        <mt-picker :slots="slots" @change="onValuesChange"></mt-picker>
+  </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+  <script>
+  new Vue({
+    el: '#app',
+    methods: {
+      onValuesChange(picker, values) {
+        if (values[0] > values[1]) {
+          picker.setSlotValue(1, values[0]);
+        }
+      }
+    },
+    data() {
+      return {
+        slots: [
+          {
+            flex: 1,
+            values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+            className: 'slot1',
+            textAlign: 'right'
+          }, {
+            divider: true,
+            content: '-',
+            className: 'slot2'
+          }, {
+            flex: 1,
+            values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+            className: 'slot3',
+            textAlign: 'left'
+          }
+        ]
+      };
+    }
+  })
+  </script>
+</html>

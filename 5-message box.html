@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <style></style>
+  <title></title>
+</head>
+<body>
+  <div id="app">
+    <mt-button @click.native="handleClick">打开alert提示框</mt-button>
+  </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="vue.js"></script>
+<!-- 引入组件库 -->
+<script src="mint-ui/lib/index.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el:'#app',
+    messageBox({
+      title:"提示"
+      message:"确定执行此操作？",
+      showCancelButton:true
+    });
+  });
+</script>
+</html>
